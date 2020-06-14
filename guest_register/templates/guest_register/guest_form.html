@@ -1,0 +1,28 @@
+{% extends "guest_register/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<form action="" method="post" autocomplete="off">
+    <!--Put CSRF token for security against hackers.-->
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-md-4">{{form.f_name|as_crispy_field}}</div>
+        <div class="col-md-4">{{form.m_name|as_crispy_field}}</div>
+        <div class="col-md-4">{{form.l_name|as_crispy_field}}</div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">{{form.suffix|as_crispy_field}}</div>
+        <div class="col-md-4">{{form.birth_date|as_crispy_field}}</div>
+        <div class="col-md-4">{{form.address|as_crispy_field}}</div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">{{form.member|as_crispy_field}}</div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"><button type="submit" class="btn btn-success">SUBMIT</button></div>
+        <div class="col-md-2"><a href="{% url 'guest_list' %}" class="btn btn-success">Back to List</a></div>
+    </div>
+    
+    
+</form>
+{% endblock content %}

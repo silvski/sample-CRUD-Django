@@ -1,0 +1,38 @@
+{% extends "guest_register/base.html" %}
+
+{% block content %}
+<table class="table table-borderless">
+    <thead class="border-bottom font-weight-bold">
+        <tr>
+            <td>First Name</td>
+            <td>Middle Name</td>
+            <td>Last Name</td>
+            <td>Suffix</td>
+            <td>Date of Birth</td>
+            <td>Address</td>
+            <td>Member</td>
+            <td colspan=2><a href="{% url 'guest_insert' %}" class="btn btn-outline-success">
+                <i class="fas fa-plus">Add New</i>
+            </a></td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for guest in guest_list %}
+            <tr>
+                <td>{{guest.f_name}}</td>
+                <td>{{guest.m_name}}</td>
+                <td>{{guest.l_name}}</td>
+                <td>{{guest.suffix}}</td>
+                <td>{{guest.birth_date}}</td>
+                <td>{{guest.address}}</td>
+                <td>{{guest.member}}</td>
+                <td><a href="{% url 'guest_update' guest.id %}" class="btn text-secondary px-0"><u>EDIT</u></a></td>
+                <td><form action="{% url 'guest_delete' guest.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn"><u>DELETE</u></button>
+                </form></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}
