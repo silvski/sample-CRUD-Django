@@ -15,6 +15,9 @@ This is a sample web application demonstrating CRUD API operations via the Djang
 **guests_project > settings.py**
 * contains the applications to be loaded into the project as well as the postgresql database credentials.
 
+**manage.py**
+* django project code for starting the web application.
+
 **guest_register > models.py**
 * contains the django model necessary to create and or update a table in the database.
   * fields specifications must also be entered here.
