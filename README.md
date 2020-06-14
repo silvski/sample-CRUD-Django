@@ -20,7 +20,7 @@ This is a sample web application demonstrating CRUD API operations via the Djang
 
 **guest_register > models.py**
 * contains the django model necessary to create and or update a table in the database.
-  * fields specifications must also be entered here.
+* specifications of the different fields must be declared here.
 
 **guest_register > forms.py**
 * creates a django form out of the specified django model.
