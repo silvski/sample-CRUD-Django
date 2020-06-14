@@ -26,3 +26,5 @@ Once the server is running, 2 pages will be made accessible namely:
 
 **guest_register > forms.py**
 * creates a django form out of the specified django model.
+
+
