@@ -1,11 +1,6 @@
-This is a sample web application demonstrating CRUD API operations via the Django Python package. 
+This is a sample web application demonstrating CRUD API operations via the Django Python package. Sample images are at the bottom of this readme.
 
 <hr>
-Once the server is running, 2 pages will be made accessible namely:
-
-* http://ip_address:8000/guest/
-* http://ip_address:8000/guest/list/
-
 <h3>Code Notes:</h3>
 
 **guest_register > views.py**
@@ -27,4 +22,14 @@ Once the server is running, 2 pages will be made accessible namely:
 **guest_register > forms.py**
 * creates a django form out of the specified django model.
 
+<hr>
+Once the server is running, 2 pages will be made accessible namely:
 
+* http://ip_address:8000/guest/
+* http://ip_address:8000/guest/list/
+
+<h3>Sample Image: Guest List</h3>
+<img src=https://raw.githubusercontent.com/silvski/sample-CRUD-Django/master/guest_list.JPG>
+
+<h3>Sample Image: Guest Form</h3>
+<img src=https://github.com/silvski/sample-CRUD-Django/blob/master/guest_list.JPG?raw=true>
